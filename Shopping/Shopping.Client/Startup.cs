@@ -24,7 +24,7 @@ namespace Shopping.Client
         {
             services.AddHttpClient("ShoppingClient", c =>
             {
-                c.BaseAddress = new Uri("http://localhost:5000");
+                c.BaseAddress = new Uri(Configuration["ShoppingApiUrl"]);
             });
             services.AddControllersWithViews();
         }
